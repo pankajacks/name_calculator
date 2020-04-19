@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="NameCalculator">
+    <h1>Name Calculator</h1>
+    <div ng-controller="NameCalculatorController">
+        Enter Your name:<br>
+        <input type="text" ng-model="name"
+            ng-keyup="displayLength($event)">
+        <br>
+        {{name}}
+        <div>
+            Total length of your name is: {{totVal}}
+        </div>
+        Key code: {{keyCod}}
+    </div>
+</body>
+</html>
